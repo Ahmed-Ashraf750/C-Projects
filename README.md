@@ -11,6 +11,7 @@ Unit Testing: Applying the Arrange-Act-Assert (AAA) pattern and utilizing mocks/
 Below is the complete list of all 60 projects categorized by difficulty. I will be checking these off as I complete them.
 
 🟢 Beginner
+
 [ ] Calculator
 
 [ ] Number Guessing Game
