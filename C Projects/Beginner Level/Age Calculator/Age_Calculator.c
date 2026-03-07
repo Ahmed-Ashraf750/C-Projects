@@ -6,6 +6,7 @@
  * This Project Shall use Least amount of memory and be as fast as possible
  * @author Ahmed Ashraf
  * @date 3/7/2026
+ * @note This Project Counts Month As 30 Days For simplicity and does not account for leap years or varying month lengths
  */
 
 #include <stdio.h>
@@ -21,6 +22,17 @@
 
 void Calculate_Age(Date_t Today_Date, Date_t Birth_Date, Date_t *Age)
 {
+    if (Today_Date.Day<Birth_Date.Day){
+        Today_Date.Month-=1;
+       Today_Date.Day+=Max_Days_Per_Month;
+    }
+    if (Today_Date.Month<Birth_Date.Month){
+        Today_Date.Year-=1;
+        Today_Date.Month+=Max_Months_Per_Year;
+    }
+    Age->Day=Today_Date.Day-Birth_Date.Day;
+    Age->Month=Today_Date.Month-Birth_Date.Month;
+    Age->Year=Today_Date.Year-Birth_Date.Year;
 }
 
 int main()
@@ -30,25 +42,26 @@ int main()
     Date_t Age_Result = {0};
     /*Scanning Present Date {@** */
     printf("\nEnter Today's Year: \n");
-    scanf("%d", &Present_Date.Year);
+    scanf("%hd", &Present_Date.Year);
     printf("\nEnter Today's Month: \n");
-    scanf("%d", &Present_Date.Month);
+    scanf("%hhd", &Present_Date.Month);
     printf("\nEnter Today's Day:  \n");
-    scanf("%d", &Present_Date.Day);
+    scanf("%hhd", &Present_Date.Day);
     /**@} */
 
     /*Scanning Date of Birth {@** */
     printf("\nEnter Birth's Year: \n");
-    scanf("%d", &Date_Of_Birth.Year);
+    scanf("%hd", &Date_Of_Birth.Year);
     printf("\nEnter Birth's Month: \n");
-    scanf("%d", &Date_Of_Birth.Month);
+    scanf("%hhd", &Date_Of_Birth.Month);
     printf("\nEnter Birth's Day:  \n");
-    scanf("%d", &Date_Of_Birth.Day);
+    scanf("%hhd", &Date_Of_Birth.Day);
     /**@} */
 
     /*Handling Edge Cases {@** */
-    if (Present_Date.Year < Date_Of_Birth.Year || Present_Date.Year < Today_Year || Date_Of_Birth.Year < Least_Valid_Year)
+    if (Present_Date.Year < Date_Of_Birth.Year || Date_Of_Birth.Year < Least_Valid_Year)
     {
+   
         printf("Wrong Year Entered Try Again");
         return Fail;
     }
