@@ -47,7 +47,7 @@ int main()
     /**@} */
 
     /*Handling Edge Cases {@** */
-    if (Present_Date.Year < Date_Of_Birth.Year || Present_Date.Year < Today_Year)
+    if (Present_Date.Year < Date_Of_Birth.Year || Present_Date.Year < Today_Year || Date_Of_Birth.Year < Least_Valid_Year)
     {
         printf("Wrong Year Entered Try Again");
         return Fail;

@@ -54,4 +54,10 @@ typedef struct
  * @brief A Macro Indicates Success
  */
 #define Success 1
+
+/**
+ * @def Least_Valid_Year
+ * @brief A Macro Indicates the Least Valid Year for Birth
+ */
+#define Least_Valid_Year 1900
 #endif
