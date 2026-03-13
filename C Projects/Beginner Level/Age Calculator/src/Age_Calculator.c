@@ -61,37 +61,44 @@ unsigned char Compare_Strings(const char *str1, const char *str2)
     return Mismatch;
 }
 
-void Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth)
+char Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth)
 {
     printf("Enter the current date (day month year): ");
     scanf("%hhu %hhu %hu", &Present_Date->Day, &Present_Date->Month, &Present_Date->Year);
 if (Present_Date->Day > Max_Days_Per_Month || Present_Date->Day<Zero )
 {
-    return;
+    printf("Invalid Day. Please enter a value between 1 and %d.\n", Max_Days_Per_Month);
+    return Fail;
 }
 
 if (Present_Date->Month > Max_Months_Per_Year || Present_Date->Month<Zero )
 {
-    return;
+    printf("Invalid Month. Please enter a value between 1 and %d.\n", Max_Months_Per_Year);
+    return Fail;
 }
 
 if (Present_Date->Year < Least_Valid_Year  )
 {
-    return;
+    printf("Invalid Year. Please enter a value greater than or equal to %d.\n", Least_Valid_Year);
+    return Fail;
 }
     printf("Enter your birth date (day month year): ");
     scanf("%hhu %hhu %hu", &Date_Of_Birth->Day, &Date_Of_Birth->Month, &Date_Of_Birth->Year);
 if (Date_Of_Birth->Day > Max_Days_Per_Month || Date_Of_Birth->Day<Zero )
 {
-    return;
+    printf("Invalid Day. Please enter a value between 1 and %d.\n", Max_Days_Per_Month);
+    return Fail;
 
 }
 if (Date_Of_Birth->Month > Max_Months_Per_Year || Date_Of_Birth->Month<Zero )
 {
-    return;
+    printf("Invalid Month. Please enter a value between 1 and %d.\n", Max_Months_Per_Year);
+    return Fail;
 }
 if (Date_Of_Birth->Year < Least_Valid_Year  )
 {
-    return;
+    printf("Invalid Year. Please enter a value greater than or equal to %d.\n", Least_Valid_Year);
+    return Fail;
 }
+return Success;
 }

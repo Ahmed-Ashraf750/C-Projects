@@ -13,7 +13,7 @@ typedef struct
 {
    unsigned char Day;
    unsigned char Month;
-   short unsigned Year;
+   short unsigned int Year;
 } Date_t;
 /**@} */
 
@@ -96,7 +96,7 @@ void Calculate_Age(Date_t Today_Date, Date_t Birth_Date, Date_t *Age);
  * @param Present_Date A pointer to a Date_t structure where the scanned current date will be stored (day, month, year)
  * @param Date_Of_Birth A pointer to a Date_t structure where the scanned birth date will be stored (day, month, year)
  */
-void Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth);
+char Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth);
 
 /**
  * @fn Compare_Strings

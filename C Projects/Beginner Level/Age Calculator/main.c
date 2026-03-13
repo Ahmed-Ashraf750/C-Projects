@@ -1,3 +1,10 @@
+/**
+ * @file main.c
+ * @brief This is the main file for the Age Calculator Project
+ * This program calculates the age of a person based on their birth year and the current year.
+ */
+
+
 #include "inc/Age_Calculator.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,20 +29,28 @@ int main()
      */
 
     Date_t Age_Result = {0};
-/**
- * @var Continue_Choice
- * @brief A string that holds the user's choice to continue calculating ages (yes/no)
- */
+    /**
+     * @var Continue_Choice
+     * @brief A string that holds the user's choice to continue calculating ages (yes/no)
+     */
     char Continue_Choice[] = keep_Run;
-
+    /**
+     * @var Scan_Status
+     * @brief A variable that holds the return value of the Scan_Date function to check for input validity
+     */
+    char Scan_Status = 10;
     while (Compare_Strings(Continue_Choice, keep_Run) == Matches)
     {
         system("cls");
-        Scan_Date(&Present_Date, &Date_Of_Birth);
+        // Scan_Date(&Present_Date, &Date_Of_Birth);
+        Scan_Status = Scan_Date(&Present_Date, &Date_Of_Birth);
+        if (Scan_Status == Success)
+        {
+            Calculate_Age(Present_Date, Date_Of_Birth, &Age_Result);
 
-        Calculate_Age(Present_Date, Date_Of_Birth, &Age_Result);
+            printf("You're %d Years , %d Months , %d Days", Age_Result.Year, Age_Result.Month, Age_Result.Day);
+        }
 
-        printf("You're %d Years , %d Months , %d Days", Age_Result.Year, Age_Result.Month, Age_Result.Day);
 
         printf("\nDo you want to calculate another age? (yes/no): ");
         scanf("%s", Continue_Choice);
