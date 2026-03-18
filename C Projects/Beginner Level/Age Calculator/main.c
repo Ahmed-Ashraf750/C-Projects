@@ -4,7 +4,7 @@
  * This program calculates the age of a person based on their birth year and the current year.
  */
 
-#include "inc/Age_Calculator.h"
+#include "inc/Age_Calculator_interface.h"
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -37,7 +37,9 @@ int main()
     while (Compare_Strings(Continue_Choice, keep_Run) == Matches)
     {
         system("cls");
-        // Scan_Date(&Present_Date, &Date_Of_Birth);
+
+        printf("Welcome to the Age Calculator!\n");
+        printf("This program will calculate your age based on the current date and your birth date.\n");
 
         if (Scan_Date(&Present_Date, &Date_Of_Birth))
         {
