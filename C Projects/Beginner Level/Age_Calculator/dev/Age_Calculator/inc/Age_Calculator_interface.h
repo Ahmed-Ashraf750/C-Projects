@@ -27,9 +27,6 @@ typedef struct
 } Date_t;
 /**@} */
 
-
-
-
 /**
  * @fn calculate_Age
  * @brief A Function that calculates the Age of a person based on the current date and birth date
@@ -56,9 +53,4 @@ char Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth);
  */
 unsigned char Compare_Strings(const char *str1, const char *str2);
 
-/**
- * @def Continue_Choice
- * @brief A Macro that holds a string representing the user's choice to continue calculating ages (yes/no)
- */
-#define keep_Run "yes"
 #endif

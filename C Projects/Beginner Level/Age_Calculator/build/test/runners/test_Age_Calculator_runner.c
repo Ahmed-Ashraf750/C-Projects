@@ -16,15 +16,15 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_Calculate_Age_Same_Day_Should_Store_Zero(void);
-extern void test_calculate_Age_Null_Pointer_Should_Handle_Gracefully(void);
+extern void test_calculate_Age_Null_Pointer_Should_Handle_Correctly(void);
 extern void test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly(void);
 extern void test_Compare_Strings_Empty_Strings_Should_Return_Match(void);
 extern void test_Compare_Strings_Null_Pointer_Should_Return_Fail(void);
 extern void test_Compare_Strings_Identical_Strings_Should_Return_Match(void);
 extern void test_Compare_Strings_Different_Strings_Should_Return_Mismatch(void);
-extern void test_Scan_Date_Invalid_Format_Should_Handle_Gracefully(void);
+extern void test_Scan_Date_Invalid_Format_Should_Handle_Correctly(void);
 extern void test_Scan_Date_Out_Of_Range_Values_Should_return_Fail(void);
-extern void test_Scan_Date_Null_Pointer_Should_Handle_Gracefully(void);
+extern void test_Scan_Date_Null_Pointer_Should_Handle_Correctly(void);
 extern void test_Scan_Date_Valid_Date_Should_Process_Correctly(void);
 
 
@@ -99,7 +99,7 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
       UNITY_PRINT_EOL();
       UnityPrint("  test_Calculate_Age_Same_Day_Should_Store_Zero");
       UNITY_PRINT_EOL();
-      UnityPrint("  test_calculate_Age_Null_Pointer_Should_Handle_Gracefully");
+      UnityPrint("  test_calculate_Age_Null_Pointer_Should_Handle_Correctly");
       UNITY_PRINT_EOL();
       UnityPrint("  test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly");
       UNITY_PRINT_EOL();
@@ -111,11 +111,11 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
       UNITY_PRINT_EOL();
       UnityPrint("  test_Compare_Strings_Different_Strings_Should_Return_Mismatch");
       UNITY_PRINT_EOL();
-      UnityPrint("  test_Scan_Date_Invalid_Format_Should_Handle_Gracefully");
+      UnityPrint("  test_Scan_Date_Invalid_Format_Should_Handle_Correctly");
       UNITY_PRINT_EOL();
       UnityPrint("  test_Scan_Date_Out_Of_Range_Values_Should_return_Fail");
       UNITY_PRINT_EOL();
-      UnityPrint("  test_Scan_Date_Null_Pointer_Should_Handle_Gracefully");
+      UnityPrint("  test_Scan_Date_Null_Pointer_Should_Handle_Correctly");
       UNITY_PRINT_EOL();
       UnityPrint("  test_Scan_Date_Valid_Date_Should_Process_Correctly");
       UNITY_PRINT_EOL();
@@ -125,17 +125,17 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
   }
 #endif
   UnityBegin("test_Age_Calculator.c");
-  run_test(test_Calculate_Age_Same_Day_Should_Store_Zero, "test_Calculate_Age_Same_Day_Should_Store_Zero", 44);
-  run_test(test_calculate_Age_Null_Pointer_Should_Handle_Gracefully, "test_calculate_Age_Null_Pointer_Should_Handle_Gracefully", 57);
-  run_test(test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly, "test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly", 69);
-  run_test(test_Compare_Strings_Empty_Strings_Should_Return_Match, "test_Compare_Strings_Empty_Strings_Should_Return_Match", 82);
-  run_test(test_Compare_Strings_Null_Pointer_Should_Return_Fail, "test_Compare_Strings_Null_Pointer_Should_Return_Fail", 92);
-  run_test(test_Compare_Strings_Identical_Strings_Should_Return_Match, "test_Compare_Strings_Identical_Strings_Should_Return_Match", 102);
-  run_test(test_Compare_Strings_Different_Strings_Should_Return_Mismatch, "test_Compare_Strings_Different_Strings_Should_Return_Mismatch", 111);
-  run_test(test_Scan_Date_Invalid_Format_Should_Handle_Gracefully, "test_Scan_Date_Invalid_Format_Should_Handle_Gracefully", 122);
-  run_test(test_Scan_Date_Out_Of_Range_Values_Should_return_Fail, "test_Scan_Date_Out_Of_Range_Values_Should_return_Fail", 133);
-  run_test(test_Scan_Date_Null_Pointer_Should_Handle_Gracefully, "test_Scan_Date_Null_Pointer_Should_Handle_Gracefully", 146);
-  run_test(test_Scan_Date_Valid_Date_Should_Process_Correctly, "test_Scan_Date_Valid_Date_Should_Process_Correctly", 158);
+  run_test(test_Calculate_Age_Same_Day_Should_Store_Zero, "test_Calculate_Age_Same_Day_Should_Store_Zero", 50);
+  run_test(test_calculate_Age_Null_Pointer_Should_Handle_Correctly, "test_calculate_Age_Null_Pointer_Should_Handle_Correctly", 63);
+  run_test(test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly, "test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly", 75);
+  run_test(test_Compare_Strings_Empty_Strings_Should_Return_Match, "test_Compare_Strings_Empty_Strings_Should_Return_Match", 88);
+  run_test(test_Compare_Strings_Null_Pointer_Should_Return_Fail, "test_Compare_Strings_Null_Pointer_Should_Return_Fail", 98);
+  run_test(test_Compare_Strings_Identical_Strings_Should_Return_Match, "test_Compare_Strings_Identical_Strings_Should_Return_Match", 108);
+  run_test(test_Compare_Strings_Different_Strings_Should_Return_Mismatch, "test_Compare_Strings_Different_Strings_Should_Return_Mismatch", 117);
+  run_test(test_Scan_Date_Invalid_Format_Should_Handle_Correctly, "test_Scan_Date_Invalid_Format_Should_Handle_Correctly", 128);
+  run_test(test_Scan_Date_Out_Of_Range_Values_Should_return_Fail, "test_Scan_Date_Out_Of_Range_Values_Should_return_Fail", 138);
+  run_test(test_Scan_Date_Null_Pointer_Should_Handle_Correctly, "test_Scan_Date_Null_Pointer_Should_Handle_Correctly", 151);
+  run_test(test_Scan_Date_Valid_Date_Should_Process_Correctly, "test_Scan_Date_Valid_Date_Should_Process_Correctly", 163);
 
   return UNITY_END();
 }
