@@ -22,7 +22,11 @@
 
 void Calculate_Age(Date_t Today_Date, Date_t Birth_Date, Date_t *Age)
 {
-
+if (Age == Null)
+    {
+        printf("Error: Age pointer is null. Cannot store the calculated age.\n");
+        return;
+    }
     if (Today_Date.Day < Birth_Date.Day)
     {
         Today_Date.Month -= 1;
@@ -40,7 +44,7 @@ void Calculate_Age(Date_t Today_Date, Date_t Birth_Date, Date_t *Age)
 
 unsigned char Compare_Strings(const char *str1, const char *str2)
 {
-    if (*str1 == Null || *str2 == Null)
+    if (str1 == Null || str2 == Null)
     {
         return Fail;
     }
@@ -62,6 +66,11 @@ unsigned char Compare_Strings(const char *str1, const char *str2)
 
 char Scan_Date(Date_t *Present_Date, Date_t *Date_Of_Birth)
 {
+    if (Present_Date == Null || Date_Of_Birth == Null)
+    {
+        printf("Error: Date pointer is null. Cannot scan date.\n");
+        return Fail;
+    }
     printf("Enter the current date (day month year): ");
     scanf("%hhu %hhu %hu", &Present_Date->Day, &Present_Date->Month, &Present_Date->Year);
     if (Present_Date->Day > Max_Days_Per_Month || Present_Date->Day < Zero)

@@ -4,16 +4,62 @@
   :dirname: test
   :basename: test_Age_Calculator.c
 :successes:
-- :test: test_Age_Calculator
-  :line: 19
+- :test: test_Calculate_Age_Same_Day_Should_Store_Zero
+  :line: 44
+  :message: ''
+  :unity_test_time: 0
+- :test: test_calculate_Age_Null_Pointer_Should_Handle_Gracefully
+  :line: 57
+  :message: ''
+  :unity_test_time: 0
+- :test: test_calculate_Age_Birth_Before_Today_Should_Calculate_Correctly
+  :line: 69
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Compare_Strings_Empty_Strings_Should_Return_Match
+  :line: 82
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Compare_Strings_Null_Pointer_Should_Return_Fail
+  :line: 92
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Compare_Strings_Identical_Strings_Should_Return_Match
+  :line: 102
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Compare_Strings_Different_Strings_Should_Return_Mismatch
+  :line: 111
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Scan_Date_Invalid_Format_Should_Handle_Gracefully
+  :line: 122
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Scan_Date_Out_Of_Range_Values_Should_return_Fail
+  :line: 133
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Scan_Date_Null_Pointer_Should_Handle_Gracefully
+  :line: 146
+  :message: ''
+  :unity_test_time: 0
+- :test: test_Scan_Date_Valid_Date_Should_Process_Correctly
+  :line: 158
   :message: ''
   :unity_test_time: 0
 :failures: []
 :ignores: []
 :counts:
-  :total: 1
-  :passed: 1
+  :total: 11
+  :passed: 11
   :failed: 0
   :ignored: 0
-:stdout: []
-:time: 0.010997000004863366
+:stdout:
+- 'Error: Age pointer is null. Cannot store the calculated age.'
+- 'Enter the current date (day month year): Invalid Day. Please enter a value between
+  1 and 30.'
+- 'Enter the current date (day month year): Invalid Day. Please enter a value between
+  1 and 30.'
+- 'Error: Date pointer is null. Cannot scan date.'
+:time: 0.012549600000056671
