@@ -42,7 +42,6 @@
  */
 #define Success 1
 
-
 /**
  * @def Matches
  * @brief A Macro Indicates that two strings match
@@ -64,5 +63,9 @@
  * @brief A Macro Represents the Null Pointer
  */
 #define Null ((void *)0)
-
+/**
+ * @def keep_Run
+ * @brief A Macro that holds a string representing the user's choice to continue calculating ages (yes/no)
+ */
+#define keep_Run "yes"
 #endif /* _AGE_CALCULATOR_PRIVATE_H_ */

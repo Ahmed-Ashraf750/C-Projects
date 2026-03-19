@@ -4,7 +4,7 @@
  * This program calculates the age of a person based on their birth year and the current year.
  * It takes the birth year and current year as input from the user and then computes the age
  * This Project Shall use Least amount of memory and be as fast as possible
- * @author Ahmed Ashraf
+ * @author Ahmed Ashraf (ahmedashraf2022222@gmail.com)
  * @date 3/7/2026
  * @note This Project Counts Month As 30 Days For simplicity and does not account for leap years or varying month lengths
  */
@@ -22,7 +22,7 @@
 
 void Calculate_Age(Date_t Today_Date, Date_t Birth_Date, Date_t *Age)
 {
-if (Age == Null)
+    if (Age == Null)
     {
         printf("Error: Age pointer is null. Cannot store the calculated age.\n");
         return;
