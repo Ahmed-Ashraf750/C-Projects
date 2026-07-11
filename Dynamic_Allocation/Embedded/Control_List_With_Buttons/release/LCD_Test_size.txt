@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   4796	     46	     28	   4870	   1306	C:\Users\Elnour Tech\OneDrive\Desktop\Gestell_intern\Tasks\LCD\release\LCD_Test.elf
